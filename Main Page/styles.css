@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+ 
+.nav_container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+}
+
+.ul__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    list-style: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    z-index: 1;
+}
+
+ul.ul__nav {
+  position: fixed;
+  top: 50px;
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+
+.ul__nav * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    z-index: 1;
+}
+
+.ul__nav a {
+    position: relative;
+    color: black;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.ul__nav a:before,
+.ul__nav a:after {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+    z-index: 1;
+}
+
+.ul__nav a:before {
+  right: 0;
+    top: 0;
+    border-right: 3px solid red;
+    border-top: 3px solid red;
+    -webkit-transform: translate(-100%, 50%);
+    transform: translate(-100%, 50%);
+    z-index: 1;
+}
+
+.ul__nav a:after {
+    left: 0;
+    bottom: 0;
+    border-left: 3px solid red;
+    border-bottom: 3px solid red;
+    -webkit-transform: translate(100%, -50%);
+    transform: translate(100%, -50%);
+    z-index: 1;
+}
+
+.ul__nav a:hover,
+.ul__nav .home a {
+  color: #ffffff;
+  -webkit-text-stroke: 1px #000;
+  z-index: 1;
+}
+
+.ul__nav a:hover:before,
+.ul__nav .home a:before,
+.ul__nav a:hover:after,
+.ul__nav .home a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+  z-index: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+.containerSocialMedia {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 40px;
+}
+
+.containerSocialMedia ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.containerSocialMedia ul li i {
+    font-size: 25px;
+ }
+
+.youtube, .instagram, .twitter{
+    position: relative;
+    color: red;
+    list-style: none;
+    background: rgb(40, 47, 49);
+    border-radius: 50%;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    z-index: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.youtube:hover, .instagram:hover, .twitter:hover {
+    color: #fff;
+    transform: rotate(20deg);
+  }
+
+  .youtube:hover:after, .instagram:hover:after, .twitter:hover:after {
+    height: 200%;
+    width: 200%;
+    transform: translateY(-75%) translateX(-25%);
+  }
+
+  .youtube:before, .instagram:before, .twitter:before {
+    transition: all 0.75s ease-in-out;
+  }
+
+  .youtube:after, .instagram:after, .twitter:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.75s ease;
+    left: 0;
+    top: 130%;
+    height: 0;
+    width: 100%;
+    border-radius: 50%;
+    transform: translateY(-9px);
+    transition: 0.75s ease-in-out;
+  
+  }
+
+  .youtube:after {
+    background: rgb(255, 0, 0);
+  }
+
+  .instagram:after {
+    background: linear-gradient(50deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,176,1) 100%);
+  }
+
+  .twitter:after {
+    background: cyan;
+  }
+
